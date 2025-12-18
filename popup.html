@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌙 Dark Mode Pro</h1>
+    
+    <div class="toggle-section">
+      <label class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label">Enable Dark Mode</span>
+    </div>
+    
+    <div class="settings-section">
+      <h3>Settings</h3>
+      
+      <div class="setting-item">
+        <label for="darkness">Darkness Level: <span id="darknessValue">50%</span></label>
+        <input type="range" id="darkness" min="10" max="100" value="50">
+      </div>
+      
+      <div class="setting-item">
+        <label for="contrast">Contrast: <span id="contrastValue">100%</span></label>
+        <input type="range" id="contrast" min="50" max="200" value="100">
+      </div>
+      
+      <div class="setting-item">
+        <label for="theme">Theme Style:</label>
+        <select id="theme">
+          <option value="true-dark">True Dark</option>
+          <option value="gray-dark" selected>Gray Dark</option>
+          <option value="blue-dark">Blue Dark</option>
+          <option value="sepia">Sepia</option>
+        </select>
+      </div>
+      
+      <div class="setting-item">
+        <label class="checkbox-label">
+          <input type="checkbox" id="invertImages" checked>
+          <span>Invert Images</span>
+        </label>
+      </div>
+      
+      <div class="setting-item">
+        <label class="checkbox-label">
+          <input type="checkbox" id="preserveColors">
+          <span>Preserve Original Colors</span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button id="applyBtn" class="btn primary">Apply to Current Tab</button>
+      <button id="saveBtn" class="btn secondary">Save Settings</button>
+    </div>
+    
+    <div class="info">
+      <p>ℹ️ Dark mode is applied to the current tab only.</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
